@@ -2,6 +2,7 @@ package media.models;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Classe représentant un utilisateur
@@ -54,11 +55,11 @@ public class User {
     }
     
     public List<Media> getMediaVus() {
-        return mediaVus;
+        return Collections.unmodifiableList(mediaVus);
     }
     
     public List<Media> getMediaFavoris() {
-        return mediaFavoris;
+        return Collections.unmodifiableList(mediaFavoris);
     }
     
     // Setters

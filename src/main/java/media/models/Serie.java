@@ -2,6 +2,7 @@ package media.models;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Classe représentant une série
@@ -35,7 +36,7 @@ public class Serie extends Media {
     }
     
     public List<Episode> getEpisodes() {
-        return episodes;
+        return Collections.unmodifiableList(episodes);
     }
     
     // Setters
